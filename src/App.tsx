@@ -1,12 +1,13 @@
 import { MantineProvider } from '@mantine/core'
-
-import './App.css'
+import { StoreProvider } from './app/provider/store'
 
 function App() {
     return (
-        <MantineProvider>
-            <div></div>
-        </MantineProvider>
+        <StoreProvider>
+            <MantineProvider>
+                <div></div>
+            </MantineProvider>
+        </StoreProvider>
     )
 }
 
