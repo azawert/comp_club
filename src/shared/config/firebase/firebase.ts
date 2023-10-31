@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore } from '@firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyBTsi_NOH5HufRd3EPGHVRtGM0a7KNtu3o',
-    authDomain: 'comp-club-proj.firebaseapp.com',
-    projectId: 'comp-club-proj',
-    storageBucket: 'comp-club-proj.appspot.com',
-    messagingSenderId: '408127387714',
-    appId: '1:408127387714:web:be616a70ac32bae054d5db',
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
 }
 
 export const app = initializeApp(firebaseConfig)
