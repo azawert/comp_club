@@ -1,11 +1,12 @@
 import { MantineProvider } from '@mantine/core'
 import { StoreProvider } from './app/provider/store'
+import Layout from './shared/ui/layout/layout'
 
 function App() {
     return (
         <StoreProvider>
             <MantineProvider>
-                <div></div>
+                <Layout>Main</Layout>
             </MantineProvider>
         </StoreProvider>
     )
