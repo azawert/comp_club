@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "enterPhoneNumber": "Введите валидный номер телефона",
+    "login": "Войдите",
+    "sendSms": "Отправить SMS",
+    "continueWithGoogle": "Продолжить с Google",
+    "continueWithGithub": "Продолжить с Github",
+    "sendSmsAgain": "Отправить СМС снова"
+  }
+}

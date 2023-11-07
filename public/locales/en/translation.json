@@ -1,1 +1,10 @@
-
+{
+  "auth": {
+    "enterPhoneNumber": "Enter a valid phone number",
+    "login": "Authenticate",
+    "sendSms": "Send OTP via sms",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithGithub": "Continue with GitHub",
+    "sendSmsAgain": "Send SMS again"
+  }
+}
