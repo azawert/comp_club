@@ -5,6 +5,10 @@
     "sendSms": "Отправить SMS",
     "continueWithGoogle": "Продолжить с Google",
     "continueWithGithub": "Продолжить с Github",
-    "sendSmsAgain": "Отправить СМС снова"
+    "sendSmsAgain": "Отправить СМС снова",
+    "enterNickname": "Введите свой логин",
+    "continueWithYourNickname": "Создать аккаунт",
+    "userNotFound": "Пользователь не найден",
+    "nicknameAlreadyTaken": "Ник уже занят"
   }
 }

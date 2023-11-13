@@ -5,6 +5,10 @@
     "sendSms": "Send OTP via sms",
     "continueWithGoogle": "Continue with Google",
     "continueWithGithub": "Continue with GitHub",
-    "sendSmsAgain": "Send SMS again"
+    "sendSmsAgain": "Send SMS again",
+    "enterNickname": "Enter nickname",
+    "continueWithYourNickname": "Create your account",
+    "userNotFound": "User not found",
+    "nicknameAlreadyTaken": "Nickname is already taken"
   }
 }
