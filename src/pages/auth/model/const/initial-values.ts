@@ -1,3 +1,3 @@
-import { IAuthForm } from '../../../../features/auth-by-phone'
+import { IAuthForm } from '../types/types';
 
-export const INITIAL_VALUES: IAuthForm = { phone: '', otp: '' }
+export const INITIAL_VALUES: IAuthForm = { phone: '', otp: '', nickname: '' };

@@ -8,6 +8,8 @@ import { formatPhoneNumberForValidation } from '../../../../shared/helpers/forma
 import { IPhoneFormProps } from '../../../../pages/auth';
 import { useSelector } from 'react-redux';
 import { IStateSchema } from '../../../../app/provider/store';
+import { verificationByGoogle } from '../../../../pages/auth/model/services/verification-by-google';
+import { verificationByGithub } from '../../../../pages/auth/model/services/verification-by-github';
 
 export const PhoneForm = ({ form }: IPhoneFormProps) => {
   const dispatch = useAppDispatch();
@@ -20,6 +22,14 @@ export const PhoneForm = ({ form }: IPhoneFormProps) => {
 
   const handleSendSms = () => {
     dispatch(sendSmsCode(form.values.phone));
+  };
+
+  const handleContinueWithGoogle = () => {
+    dispatch(verificationByGoogle());
+  };
+
+  const handleContinueWithGithub = () => {
+    dispatch(verificationByGithub());
   };
 
   return (
@@ -49,11 +59,19 @@ export const PhoneForm = ({ form }: IPhoneFormProps) => {
       </Center>
       <Space h="md" />
       <Flex justify={'space-around'}>
-        <Button color="gray" leftSection={<IconBrandGoogle />}>
+        <Button
+          color="gray"
+          leftSection={<IconBrandGoogle />}
+          onClick={handleContinueWithGoogle}
+        >
           {t('auth.continueWithGoogle')}
         </Button>
 
-        <Button color="rgba(13, 13, 13, 1)" leftSection={<IconBrandGithub />}>
+        <Button
+          color="rgba(13, 13, 13, 1)"
+          leftSection={<IconBrandGithub />}
+          onClick={handleContinueWithGithub}
+        >
           {t('auth.continueWithGithub')}
         </Button>
       </Flex>
