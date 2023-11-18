@@ -1,11 +1,12 @@
 import { Button, Center, Flex, Space, Text, TextInput } from '@mantine/core';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { IPhoneFormProps } from '../../../../pages/auth';
-import { createNicknameAndUser } from '../../../../pages/auth/model/services/verification-by-phone';
+
 import { useAppDispatch } from '../../../../shared/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { IStateSchema } from '../../../../app/provider/store';
+import { IPhoneFormProps } from '../../model/types/types';
+import { createNicknameAndUser } from '../../model/services/verification-by-phone';
 
 const NicknameForm: FC<IPhoneFormProps> = ({ form }) => {
   const { t } = useTranslation();

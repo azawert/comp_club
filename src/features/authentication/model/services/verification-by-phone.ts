@@ -73,7 +73,7 @@ export const verifyOtp = createAsyncThunk<void, IVerifyOtp, ThunkConfig<string>>
         'id',
         resUser.user.uid,
       );
-      if (user && user.nickname) {
+      if (user && user[0].nickname) {
         resetAndNavigate(user, dispatch, extra, authForm);
         return;
       }

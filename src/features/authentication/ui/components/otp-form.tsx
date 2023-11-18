@@ -2,15 +2,12 @@ import { useEffect, useState } from 'react';
 import { Button, Center, Flex, PinInput, Space } from '@mantine/core';
 import { IconArrowBack } from '@tabler/icons-react';
 import { useAppDispatch } from '../../../../shared/hooks/useAppDispatch';
-import {
-  EAuthStep,
-  IPhoneFormProps,
-  authActions,
-  sendSmsCode,
-  verifyOtp,
-} from '../../../../pages/auth';
+
 import { useTranslation } from 'react-i18next';
 import { useInterval } from '@mantine/hooks';
+import { EAuthStep, IPhoneFormProps } from '../../model/types/types';
+import { authActions } from '../../model/slice/auth-slice';
+import { sendSmsCode, verifyOtp } from '../../model/services/verification-by-phone';
 
 const otpInputValueLength = 6;
 const oneMinuteInSeconds = 60;

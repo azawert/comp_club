@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { auth } from '../../../../shared/config/firebase/firebase';
-import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { IStateSchema } from '../../../../app/provider/store';
 import { ThunkConfig } from './verification-by-phone';
 import {
@@ -11,12 +11,13 @@ import {
 import { EAuthStep, authActions } from '../..';
 import { thunkErrorHandler } from '../../../../shared/helpers/error-handler';
 import { resetAndNavigate } from '../const/common';
-export const verificationByGithub = createAsyncThunk<
+
+export const verificationByGoogle = createAsyncThunk<
   void,
   void,
   ThunkConfig<string> & { state: IStateSchema }
->('verificationByGithub', async (_, thunkApi) => {
-  const provider = new GithubAuthProvider();
+>('verificationByGoogle', async (_, thunkApi) => {
+  const provider = new GoogleAuthProvider();
   const { dispatch, extra, rejectWithValue } = thunkApi;
   try {
     const { user } = await signInWithPopup(auth, provider);
@@ -25,13 +26,13 @@ export const verificationByGithub = createAsyncThunk<
       'id',
       user.uid,
     );
-    if (databaseUser?.nickname) {
+    if (databaseUser && databaseUser[0]?.nickname) {
       resetAndNavigate(databaseUser, dispatch, extra);
       return;
     }
     dispatch(authActions.setUser(userMapping(user)));
     dispatch(authActions.setSelectedStep(EAuthStep.CREATING_NICKNAME));
-  } catch (e) {
-    rejectWithValue(thunkErrorHandler(e));
+  } catch (error) {
+    rejectWithValue(thunkErrorHandler(error));
   }
 });

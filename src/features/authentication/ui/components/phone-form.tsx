@@ -1,15 +1,17 @@
 import { Button, Center, Flex, Space, Text } from '@mantine/core';
 import { IconBrandGithub, IconBrandGoogle } from '@tabler/icons-react';
 import { PhoneInput } from 'react-international-phone';
-import { sendSmsCode } from '../../../../pages/auth/model/services/verification-by-phone';
+
 import { useAppDispatch } from '../../../../shared/hooks/useAppDispatch';
 import { t } from 'i18next';
 import { formatPhoneNumberForValidation } from '../../../../shared/helpers/format-phone-number';
-import { IPhoneFormProps } from '../../../../pages/auth';
+
 import { useSelector } from 'react-redux';
 import { IStateSchema } from '../../../../app/provider/store';
-import { verificationByGoogle } from '../../../../pages/auth/model/services/verification-by-google';
-import { verificationByGithub } from '../../../../pages/auth/model/services/verification-by-github';
+import { IPhoneFormProps } from '../../model/types/types';
+import { sendSmsCode } from '../../model/services/verification-by-phone';
+import { verificationByGoogle } from '../../model/services/verification-by-google';
+import { verificationByGithub } from '../..';
 
 export const PhoneForm = ({ form }: IPhoneFormProps) => {
   const dispatch = useAppDispatch();
