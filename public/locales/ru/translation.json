@@ -10,5 +10,37 @@
     "continueWithYourNickname": "Создать аккаунт",
     "userNotFound": "Пользователь не найден",
     "nicknameAlreadyTaken": "Ник уже занят"
+  },
+  "main": {
+    "client": "Клиенты",
+    "amount": "Всего:",
+    "filters": {
+      "phonenumber": "Телефон",
+      "phonenumberPlaceholder": "+7 (925) 000-00-00",
+      "nickname": "Никнейм",
+      "fullName": "ФИО",
+      "actions": {
+        "search": "Поиск",
+        "reset": "Сбросить"
+      }
+    },
+    "table": {
+      "nickname": "Никнейм",
+      "fullName": "ФИО",
+      "phonenumber": "Телефон",
+      "balance": "Баланс",
+      "email": "Почта",
+      "role": "Роль",
+      "loadMore": "Загрузить еще"
+    }
+  },
+  "profile": {
+    "email": "Почта",
+    "phonenumber": "Номер телефона",
+    "fullname": "ФИО",
+    "fullnamePlaceholder": "Введите ваше имя...",
+    "phonePlaceholder": "Введите ваш телефон...",
+    "emailPlaceholder": "Введите вашу почту...",
+    "saveChanges": "Сохранить изменения"
   }
 }

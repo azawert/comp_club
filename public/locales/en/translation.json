@@ -10,5 +10,37 @@
     "continueWithYourNickname": "Create your account",
     "userNotFound": "User not found",
     "nicknameAlreadyTaken": "Nickname is already taken"
+  },
+  "main": {
+    "client": "Clients",
+    "amount": "Total:",
+    "filters": {
+      "phonenumber": "Phonenumber",
+      "phonenumberPlaceholder": "+7 (925) 000-00-00",
+      "nickname": "Nickname",
+      "fullName": "Full name",
+      "actions": {
+        "search": "Search",
+        "reset": "Reset"
+      }
+    },
+    "table": {
+      "nickname": "Nickname",
+      "fullName": "Full name",
+      "phonenumber": "Phonenumber",
+      "balance": "Balance",
+      "email": "Email",
+      "role": "Role",
+      "loadMore": "Load more"
+    }
+  },
+  "profile": {
+    "email": "Email",
+    "phonenumber": "Phone Number",
+    "fullname": "Full Name",
+    "fullnamePlaceholder": "Enter your fullname...",
+    "phonePlaceholder": "Enter your phone number...",
+    "emailPlaceholder": "Enter your email...",
+    "saveChanges": "Save changes"
   }
 }
